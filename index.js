@@ -15,11 +15,12 @@ app.get("/", (req, res) => {
     res.send("Hello! This is the home page!");
 });
 
+// GET Request for all courses
 app.get("/api/courses", (req, res) => {
     res.send(courses);
 });
 
-// GET Request from Express (req,res) is the route handler
+// GET Request for a specific course - (req,res) is the route handler
 app.get("/api/courses/:id", (req, res) => {
     const course = courses.find(c => c.id === parseInt(req.params.id));
     if (!course)
@@ -49,7 +50,7 @@ app.post("/api/courses", (req, res) => {
     res.send(course);
 });
 
-// PUT Request to update
+// PUT Request to update a course name
 app.put("/api/courses/:id", (req, res) => {
     // If course doesnt exist 404
     const course = courses.find(c => c.id === parseInt(req.params.id));
@@ -72,7 +73,7 @@ app.put("/api/courses/:id", (req, res) => {
     res.send(course);
 });
 
-// DELETE Request
+// DELETE Request to delet a course
 app.delete("/api/courses/:id", (req, res) => {
     // if the course does not exist, return 404
     const course = courses.find(c => c.id === parseInt(req.params.id));
@@ -88,7 +89,7 @@ app.delete("/api/courses/:id", (req, res) => {
     res.send(course);
 });
 
-// Validate the course name using Joi - ensure
+// Validate the course name using Joi - ensure that a name is entered and it is of minimum 6 characters
 function validateCourse(course) {
     const schema = Joi.object({
         name: Joi.string()
