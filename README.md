@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-This code was made using Node, Express and Joi. It is my first go at creating a simple Get, Post, Put and Delete API. In the code, you can observe that there are originally 3 courses:
+This code was made using Node, Express and Joi. It is my first go at creating a simple Get, Post, Put and Delete API. Note that Express uses the HTTP protocol. In the code, you can observe that there are originally 3 courses:
 
 ```
     { id: 1, name: "CS1010S" },
