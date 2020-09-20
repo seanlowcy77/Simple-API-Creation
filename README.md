@@ -2,13 +2,15 @@
 
 ## 1. Introduction
 
-This code was made using Node and Express. It shows the creation of a simple Get, Post, Put and Delete API. Originally, there are 3 courses:
+This code was made using Node, Express and Joi. It is my first go at creating a simple Get, Post, Put and Delete API. In the code, you can observe that there are originally 3 courses:
 
 ```
     { id: 1, name: "CS1010S" },
     { id: 2, name: "CS2103" },
     { id: 3, name: "CS3219" }
 ```
+
+Do have fun testing the APIs locally or on Postman!
 
 ## 2. Quick Start
 
@@ -41,7 +43,7 @@ The server will then start listening for requests. After that enjoy typing the A
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/828d6a05127917ced48a)
 
-### Remember to run / deploy the server before you do so!
+### Note: Remember to run / deploy the server before you do so!
 
 ## 3. Description and Guide to use APIs
 
@@ -67,7 +69,7 @@ The server will then start listening for requests. After that enjoy typing the A
 ### Things to Note
 
 -   For 1, if the list is empty an empty array will be returned
--   For 2., if the id entered is invalid, an error message, `The course with the given id was not found` with a 404 status will be returned to the client.
+-   For 2., if the id entered is invalid, an error message, `The course with the given id was not found` with a 404 Not Found status will be returned to the client.
 
 ### b. POST Request
 
@@ -109,7 +111,7 @@ The course name of the id in the parameter of the request will be changed to the
 
 ### Things to Note
 
--   If the id entered in the request parameters is invalid (there does not exist a course than has that particular id) an error message, `The course with the given id was not found` with a 404 status will be returned to the client.
+-   If the id entered in the request parameters is invalid (there does not exist a course than has that particular id) an error message, `The course with the given id was not found` with a 404 Not Found status will be returned to the client.
 -   If the body is invalid - such as "name" not being entered, a 400 Bad Request will be returned along with an error message `"name" is required`.
 -   In addition, since all courses in NUS have 6 characters normally, should the client enter any course smaller than 6 characters, a 400 Bad Request will be returned along with an error message `"name" length must be at least 6 characters long`.
 
@@ -131,11 +133,7 @@ with a 200 OK status.
 
 ### Things to Note
 
--   If the id entered in the request parameters is invalid (there does not exist a course than has that particular id) an error message, `The course with the given id was not found` with a 404 status will be returned to the client.
-
-### Note
-
--   While the header is `meddescrecognition`, it is simply the name of my local project. Do note that this is customizable (when you create a new project in FireBase) and the project will run as long as your Bundle Identifier is the same as the one you have recorded in FireBase.
+-   If the id entered in the request parameters is invalid (there does not exist a course than has that particular id) an error message, `The course with the given id was not found` with a 404 Not Found status will be returned to the client.
 
 ## 4. Requirements
 
