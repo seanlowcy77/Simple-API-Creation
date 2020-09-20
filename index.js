@@ -13,7 +13,7 @@ const courses = [
 
 app.get("/", (req, res) => {
     res.send(
-        "Hello! This is the home page!\nEnter this URL to view all the current courses! https://api-deploy123.herokuapp.com/api/courses"
+        "Hello! This is the home page!\nAdd /api/courses above to view all the courses"
     );
 });
 
