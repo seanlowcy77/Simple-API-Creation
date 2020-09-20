@@ -10,7 +10,8 @@ This code was made using Node, Express and Joi. It is my first go at creating a 
     { id: 3, name: "CS3219" }
 ```
 
-Do have fun testing the APIs locally or on Postman!
+Do have fun testing the APIs locally or on Postman! In addition, I have deployed the APIs using Heroku - link is below:
+https://api-deploy123.herokuapp.com/
 
 ## 2. Quick Start
 
@@ -39,11 +40,13 @@ After that, enter
 nodemon index.js
 ```
 
-The server will then start listening for requests. After that enjoy typing the API requests in! For b and c (POST and PUT requests) you require a message body. Thus it is advisable to test b and c via [Postman](https://www.postman.com/). Click the link below to import the Collection and test the APIs! The collection below uses the localhost port of 3000 - if you're using a different port do change it!
+The server will then start listening for requests. After that enjoy typing the API requests in! For b and c (POST and PUT requests) you require a message body. Thus it is advisable to test b and c via [Postman](https://www.postman.com/). Click the link below to import the Collection and test the APIs! The collection below uses the localhost port of 3000 - if you're using a different port do change it! Otherwise if you are trying to test the API that is deployed on Heroku simply change `http://localhost.3000` to `https://api-deploy123.herokuapp.com`.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/828d6a05127917ced48a)
 
-### Note: Remember to run / deploy the server before you do so!
+Currently this link is working on Mac OS for Postman v3.2.14.1 or higher. If there are any issues do not hesitate to contact me!
+
+### Note: If you are testing locally, remember to run / deploy the server before you do so!
 
 ## 3. Description and Guide to use APIs
 
@@ -135,7 +138,26 @@ with a 200 OK status.
 
 -   If the id entered in the request parameters is invalid (there does not exist a course than has that particular id) an error message, `The course with the given id was not found` with a 404 Not Found status will be returned to the client.
 
-## 4. Requirements
+## 4. Deployment
+
+The APIs have been deployed via Heroku. If you want to deploy it yourself, simply enter the following commands:
+
+```
+# create a new heroku app
+heroku apps:create <new-app-name>
+
+# add heroku remote reference to the local repository
+heroku git:remote --app <new-app-name>
+
+# commit and push the files
+git add -A
+git commit -m "Initial commit"
+git push heroku master
+```
+
+If you are deploying your own apps in future a reminder to be careful of `scripts` in `package.json`. If you do not define it, Heroku will automatically run `npm start` instead. More about this [here](https://devcenter.heroku.com/changelog-items/1557).
+
+## 5. Requirements
 
 The file is currently run on
 
