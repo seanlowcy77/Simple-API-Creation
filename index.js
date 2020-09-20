@@ -12,7 +12,9 @@ const courses = [
 ];
 
 app.get("/", (req, res) => {
-    res.send("Hello! This is the home page!");
+    res.send(
+        "Hello! This is the home page!\nEnter this URL to view all the current courses! https://api-deploy123.herokuapp.com/api/courses"
+    );
 });
 
 // GET Request for all courses
