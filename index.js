@@ -106,7 +106,7 @@ function validateCourse(course) {
 const port = process.env.PORT || 3000;
 
 // Open the server to start listening for requests
-app.listen(port, () => {
+server = app.listen(port, () => {
     console.log(`Listening to port ${port}`);
 });
 
@@ -115,3 +115,5 @@ app.listen(port, () => {
 app.get("/api/courses/:year/:month", (req, res) => {
     res.send(req.query);
 });
+
+module.exports = server;
