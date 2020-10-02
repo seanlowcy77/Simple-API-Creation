@@ -14,7 +14,7 @@ describe("Courses", () => {
                     res.should.have.status(200);
                     assert.equal(
                         res.text,
-                        " Hello! This is the home page!\nAdd /api/courses above to view all the courses",
+                        "Hello! This is the home page!\nAdd /api/courses above to view all the courses",
                         "The homepage text is different from what is expected"
                     );
                     done();
