@@ -1,17 +1,25 @@
 {
-  "name": "express-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "joi": "^17.2.1"
-  }
+    "name": "express-demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "mocha — timeout 10000",
+        "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "chai": "4.2.0",
+        "chai-http": "4.2.1",
+        "mocha": "5.2.0"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "joi": "^17.2.1"
+    }
 }
