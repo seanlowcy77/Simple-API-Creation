@@ -4,7 +4,7 @@ var should = chai.should();
 var assert = chai.assert;
 chai.use(chaiHttp);
 let server = require("../index");
-//Our parent block
+
 describe("Courses", () => {
     describe("/GET courses", () => {
         it("it should GET the homepage", done => {
