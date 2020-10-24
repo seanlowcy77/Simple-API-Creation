@@ -2,7 +2,6 @@ const Joi = require("joi");
 const express = require("express");
 const app = express();
 
-// Adding a piece of middleware to use the parse json
 app.use(express.json());
 
 const courses = [
@@ -42,6 +41,11 @@ app.post("/api/courses", (req, res) => {
         res.status(400).send(result.error.details[0].message);
         return;
     }
+    const containsDuplicate = courses.find(c => c.name === req.body.name);
+    if (containsDuplicate) {
+        res.status(400).send("Duplicate module");
+        return;
+    }
     // Need to add json thing above cause we need to parse body which is in json
     const course = {
         id: courses.length + 1,
@@ -75,7 +79,7 @@ app.put("/api/courses/:id", (req, res) => {
     res.send(course);
 });
 
-// DELETE Request to delet a course
+// DELETE Request to delete a course
 app.delete("/api/courses/:id", (req, res) => {
     // if the course does not exist, return 404
     const course = courses.find(c => c.id === parseInt(req.params.id));
@@ -93,6 +97,7 @@ app.delete("/api/courses/:id", (req, res) => {
 
 // Validate the course name using Joi - ensure that a name is entered and it is of minimum 6 characters
 function validateCourse(course) {
+    // print("course is ", course);
     const schema = Joi.object({
         name: Joi.string()
             .min(6)
