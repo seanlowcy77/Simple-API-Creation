@@ -92,6 +92,24 @@ describe("Courses", () => {
                     done();
                 });
         });
+        it("it should not POST a course which already exists in the list", done => {
+            const course = {
+                id: 4,
+                name: "CS1010S"
+            };
+            chai.request(server)
+                .post("/api/courses")
+                .send(course)
+                .end((err, res) => {
+                    res.should.have.status(400);
+                    assert.equal(
+                        res.text,
+                        'Duplicate module',
+                        "The course is able to be added despite not passing the validation of requirements set using Joi"
+                    );
+                    done();
+                });
+        });
     });
 
     describe("/PUT update a course", () => {
