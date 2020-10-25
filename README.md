@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/seanlowcy77/Simple-API-Creation.svg?branch=AWS-Lambda)](https://travis-ci.org/seanlowcy77/Simple-API-Creation)
+
 # APIs for My Module List
 
 ## 1. Introduction
