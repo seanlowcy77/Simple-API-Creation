@@ -10,3 +10,7 @@ deploy:
   secret_access_key: ${SECRET_KEY}
   function_name: ${FUNCTION_NAME}
   edge: true # opt in to dpl v2
+  on:
+    branches:
+      only:
+        - AWS-Lambda
