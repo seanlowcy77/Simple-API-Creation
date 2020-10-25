@@ -160,7 +160,7 @@ If you are deploying your own apps in future a reminder to be careful of `script
 
 ## 5. Testing
 
-Testing of the APIs were done via Chai and Mocha. Simply run `npm test` in the root directory to see the results of the tests. Travis also helps automate these tests with the `travis.yml` file. All test cases should be passing
+Testing of the APIs were done via Chai and Mocha. Simply run `npm test` in the root directory to see the results of the tests. Travis also helps automate these tests with the `travis.yml` file. All test cases should be passing.
 
 ![Testcases success](https://github.com/seanlowcy77/Simple-API-Creation/blob/AWS-Lambda/images/Testcases.png)
 
