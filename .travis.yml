@@ -12,5 +12,4 @@ deploy:
   edge: true # opt in to dpl v2
   on:
     branches:
-      only:
-        - ${DEPLOYMENT_BRANCH}
+      ${DEPLOYMENT_BRANCH}
