@@ -2,6 +2,8 @@
 
 # APIs for My Module List
 
+The difference between this README and the README on the Master branch is that this is configured for those interested in deploying the API to AWS Lambda as well!
+
 ## 1. Introduction
 
 This code was made using Node, Express and Joi. It is my first go at creating a simple Get, Post, Put and Delete API. The APIs are used for the Module List Application. While this README is for the APIs, more about the application may be found [here](https://github.com/seanlowcy77/My-Module-List/tree/master/client). Note that Express uses the HTTP protocol. In the code, you can observe that there are originally 3 courses:
