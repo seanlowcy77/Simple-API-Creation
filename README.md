@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/seanlowcy77/Simple-API-Creation.svg?branch=master)](https://travis-ci.org/seanlowcy77/Simple-API-Creation)
+
 # Simple Get, Post, Put, Delete API
 
 ## 1. Introduction
