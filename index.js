@@ -42,6 +42,11 @@ app.post("/api/courses", (req, res) => {
         res.status(400).send(result.error.details[0].message);
         return;
     }
+    const containsDuplicate = courses.find(c => c.name === req.body.name);
+    if (containsDuplicate) {
+        res.status(400).send("Duplicate module");
+        return;
+    }
     // Need to add json thing above cause we need to parse body which is in json
     const course = {
         id: courses.length + 1,
