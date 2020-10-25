@@ -4,8 +4,8 @@ const app = express();
 
 // Enables CORs for a specific domain https://enable-cors.org/server_expressjs.html
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
-    res.header("Access-Control-Request-Headers", "*");
+    res.header("Access-Control-Allow-Origin", "https://my-module-list.netlify.app/*"); // update to match the domain you will make the request from
+    res.header("Access-Control-Request-Headers", "https://my-module-list.netlify.app/*");
     res.setHeader("Access-Control-Allow-Credentials", "true");
     res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
     res.setHeader(
