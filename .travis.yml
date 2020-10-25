@@ -6,7 +6,7 @@ cache:
     - "node_modules"
 deploy:
   provider: lambda
-  access_key_id: <encrypted access_key_id>
-  secret_access_key: <encrypted secret_access_key>
-  function_name: <function_name>
+  access_key_id: ${ACCESS_KEY}
+  secret_access_key: ${SECRET_KEY}
+  function_name: ${FUNCTION_NAME}
   edge: true # opt in to dpl v2
