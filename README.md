@@ -98,6 +98,7 @@ where NEW_ID is simply the length of the current array + 1.
 ### Things to Note
 
 -   If the body is invalid - such as "name" not being entered, a 400 Bad Request will be returned along with an error message `"name" is required`.
+-   If a module with the same "name" already exists inside the list, a 400 Bad Request will be returned along with an error message `Duplicate module`.
 -   In addition, since all courses in NUS have 6 characters normally, should the client enter any course smaller than 6 characters, a 400 Bad Request will be returned along with an error message `"name" length must be at least 6 characters long`.
 
 ### c. PUT Request

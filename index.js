@@ -2,7 +2,6 @@ const Joi = require("joi");
 const express = require("express");
 const app = express();
 
-// Adding a piece of middleware to use the parse json
 app.use(express.json());
 
 const courses = [
@@ -80,7 +79,7 @@ app.put("/api/courses/:id", (req, res) => {
     res.send(course);
 });
 
-// DELETE Request to delet a course
+// DELETE Request to delete a course
 app.delete("/api/courses/:id", (req, res) => {
     // if the course does not exist, return 404
     const course = courses.find(c => c.id === parseInt(req.params.id));
@@ -98,6 +97,7 @@ app.delete("/api/courses/:id", (req, res) => {
 
 // Validate the course name using Joi - ensure that a name is entered and it is of minimum 6 characters
 function validateCourse(course) {
+    // print("course is ", course);
     const schema = Joi.object({
         name: Joi.string()
             .min(6)
