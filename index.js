@@ -102,7 +102,6 @@ function validateCourse(course) {
     return schema.validate({ name: course.name });
 }
 
-// Setting up PORT
 // const port = process.env.PORT || 3000;
 
 // Open the server to start listening for requests
