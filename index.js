@@ -103,12 +103,12 @@ function validateCourse(course) {
 }
 
 // Setting up PORT
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
 
 // Open the server to start listening for requests
-server = app.listen(port, () => {
-    console.log(`Listening to port ${port}`);
-});
+// server = app.listen(port, () => {
+//     console.log(`Listening to port ${port}`);
+// });
 
 // Testing the sending of query:
 // E.g. http://localhost:3000/api/courses/2018/1?sortBy=name
@@ -116,4 +116,5 @@ app.get("/api/courses/:year/:month", (req, res) => {
     res.send(req.query);
 });
 
-module.exports = server;
+// module.exports = server;
+module.exports = app;
