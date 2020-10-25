@@ -11,5 +11,5 @@ deploy:
   function_name: ${FUNCTION_NAME}
   edge: true # opt in to dpl v2
   on:
-    branches:
+    branch:
       ${DEPLOYMENT_BRANCH}
