@@ -158,9 +158,23 @@ git push heroku master
 
 If you are deploying your own apps in future a reminder to be careful of `scripts` in `package.json`. If you do not define it, Heroku will automatically run `npm start` instead. More about this [here](https://devcenter.heroku.com/changelog-items/1557).
 
+In addition, this API has been deployed using `AWS Lambda`. I followed this [youtube tutorial](https://www.youtube.com/watch?v=2_mv0ACpamo) to deploy the API on AWS Lambda. In addition, we can also use Travis to configure some continuous deployment with AWS Lambda. More about how to do it [here](https://docs.travis-ci.com/user/deployment-v2/providers/lambda/#aws-permissions). The API hosted by AWS Lambda is available [here](https://ndcvubv6ld.execute-api.us-east-1.amazonaws.com/production/). 
+
+Should you want to host your own API, simply follow the guides above. In addition, the `travis.yml` file has already been pre-configured. Simply add in the environmental variables on Travis!
+
+![Travis file Deployment](https://github.com/seanlowcy77/Simple-API-Creation/blob/AWS-Lambda/images/Travis_Deployment.png)
+
+Upon successful initiation of continuous deployment, you should observe something like this in your Travis Job log. 
+
+![Successful CD](https://github.com/seanlowcy77/Simple-API-Creation/blob/AWS-Lambda/images/Successful_Travis_AWS.png)
+
+On your AWS console, your function should also be re-deployed.
+
 ## 5. Testing
 
-Testing of the APIs were done via Chai and Mocha. Simply run `npm test` in the root directory to see the results of the tests. Travis also helps automate these tests with the `travis.yml` file.
+Testing of the APIs were done via Chai and Mocha. Simply run `npm test` in the root directory to see the results of the tests. Travis also helps automate these tests with the `travis.yml` file. All test cases should be passing. 
+
+![Testcases success](https://github.com/seanlowcy77/Simple-API-Creation/blob/AWS-Lambda/images/Testcases.png)
 
 ## 6. Requirements
 
